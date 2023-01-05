@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calcualtor</title>
+    <!-- add css file -->
+    <link rel="stylesheet" href="app.component.css">
+    
+
+</head>
+<body>
+  <!-- <app-operation></app-operation> -->
+  
+    <form class="calc" method="get">
+      <div class="text">
+        <input readonly type="text" [(ngModel)] = "toshow" name = "display" class="input">
+        <input readonly type="text"  name = "display" class="sol" value="{{ans}}">
+      </div>
+      <div  class="container" >
+        <button class="op" (click)="write('%')">%</button>
+        <button class="op" (click)="clear()">CF</button>
+        <button class="op" (click)="clear()">C</button>
+        <button class="op" (click)="del()">Del</button>
+        <button class="op" (click)="getreq('1/x','no')">
+          <sup>1</sup>/<sub>x</sub>
+        </button>
+        <button class="op" (click)="getreq('sqrt','no')">
+          x<sup>2</sup>
+        </button>
+        <button class="op" (click)="getreq('root','no')">rootx</button>
+        <button class="op" (click)="write('/')">/</button>
+        <button class="num" (click)="write('7')">7</button>
+        <button class="num" (click)="write('8')">8</button>
+        <button class="num" (click)="write('9')">9</button>
+        <button class="op" (click)="write('x')">x</button>
+        <button class="num" (click)="write('4')">4</button>
+        <button class="num" (click)="write('5')">5</button>
+        <button class="num" (click)="write('6')">6</button>
+        <button class="op" (click)="write('-')">-</button>
+        <button class="num" (click)="write('1')">1</button>
+        <button class="num" (click)="write('2')">2</button>
+        <button class="num" (click)="write('3')">3</button>
+        <button class="op" (click)="write('+')">+</button>
+        <button class="num" (click)="write('-ve')">
+          <sup>+</sup>/<sub>-</sub>
+        </button>
+        <button class="num" (click)="write('0')">0</button>
+        <button class="num" (click)="write('.')">.</button>
+        <button class="eq" (click)="write('=')"><a href="a">=</a></button>
+        <!-- <button class="eq" (click)="write('=')">=</button> -->
+      </div>
+    </form>
+    
+</body>
+</html>  

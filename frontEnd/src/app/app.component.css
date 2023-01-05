@@ -1,0 +1,76 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+/* whole design  */
+.calc{
+    position: absolute;
+    left: 50%; 
+    top: 10%;
+    transform: translate(-50%) ; 
+    background-color:rgb(193, 190, 190);
+    border: solid 2px;
+    width: calc(75px * 4);
+    
+}
+/* area of show  */
+.calc .text .input {
+    width: calc(75px * 4);
+    height: 50px;
+    background-color:rgb(193, 190, 190);
+    border-style: none none solid none;
+}
+.calc .text .sol {
+    width: calc(75px * 4);
+    height: 50px;
+    background-color:rgb(193, 190, 190);
+    border: none;
+    text-align: right;
+}
+/* all buttons  */
+.calc .container{
+    width: calc(75px * 4px);;
+    /* display: flex;
+    flex-wrap: wrap; */
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(75px, 1fr)); 
+    grid-template-columns: repeat(auto-fill);
+    /* grid-column-gap: 40px; */
+    /* grid-row-gap: 60px; */
+}
+/* each button  */
+.calc .container button {
+    
+    border-width: 1px;
+    margin: 1px;
+    width: 75px;
+    height: 50px;
+    cursor: pointer;
+}
+/* only number  */
+.calc .container .num {
+    background-color:rgb(255, 255, 255);
+}
+.calc .container .num:hover {
+    background-color:rgb(229, 231, 233);
+}
+/* not a number  */
+.calc .container .op {
+    background-color:rgb(207, 205, 205);
+}
+.calc .container .op:hover{
+    background-color:rgb(178, 173, 173);
+}
+/* = sign  */
+.calc .container .eq {
+    background-color:rgb(17, 196, 250);
+}
+/* .calc .container .eq {
+    background-color:red;
+} */
+.calc .container .eq:hover{
+    background-color:rgb(6, 168, 243);
+}
+/* .calc .container .eq a{
+    text-decoration: none;
+} */
